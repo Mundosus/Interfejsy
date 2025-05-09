@@ -1,11 +1,14 @@
 package com.mundosus.shapes;
 
-import com.mundosus.shapes.builders.ShapeBuilder;
-import com.mundosus.shapes.builders.SquareBuilder;
+import com.mundosus.shapes.builders.*;
 
 public enum Shapes {
-    SQUARE(new SquareBuilder());
-    private ShapeBuilder<? extends Shape> builder;
+    SQUARE(new SquareBuilder()),
+    RECTANGLE(new RectangleBuilder()),
+    CIRCLE(new CircleBuilder()),
+    TRIANGLE(new TriangleBuilder()); // <- dodajemy tutaj
+
+    private final ShapeBuilder<? extends Shape> builder;
 
     Shapes(ShapeBuilder<? extends Shape> builder) {
         this.builder = builder;

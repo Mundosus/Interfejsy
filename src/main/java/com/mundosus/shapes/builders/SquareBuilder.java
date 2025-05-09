@@ -1,19 +1,22 @@
 package com.mundosus.shapes.builders;
 
 import com.mundosus.shapes.Square;
-
 import java.util.Scanner;
 
 public class SquareBuilder implements ShapeBuilder<Square> {
 
-    //TODO: Add obtaining fields that you need and pass them to square object
+    private double side;
+
     @Override
     public ShapeBuilder<Square> obtainData(Scanner scanner) {
+        System.out.print("Enter side length: ");
+        this.side = scanner.nextDouble();
+        scanner.nextLine(); // czyści enter
         return this;
     }
 
     @Override
     public Square build() {
-        return null;
+        return new Square(side); // <- najważniejsze!
     }
 }
