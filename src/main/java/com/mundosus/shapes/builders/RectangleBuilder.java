@@ -1,7 +1,6 @@
 package com.mundosus.shapes.builders;
 
 import com.mundosus.shapes.Rectangle;
-import com.mundosus.shapes.Shape;
 
 import java.util.Scanner;
 
